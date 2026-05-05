@@ -433,11 +433,72 @@ section {
   transform: translateY(0);
 }
 
+.timeline-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 3px;
+}
+
+.timeline-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff7ac6;
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  width: 0;
+  animation:
+    typing 8s steps(8, end) infinite,
+    blink 0.8s infinite;
+}
+
 footer {
   color: #b99ed2;
   border-top: 1px solid rgba(193, 92, 255, 0.16);
   margin-top: 4rem;
   padding: 1.2rem 0 2rem;
+}
+
+@keyframes typing {
+  /* 0% à 30% : Le texte s'écrit (environ 1.5s) */
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 5rem;
+  }
+
+  /* 30% à 80% : Le texte reste affiché (pause de 2.5s) */
+  80% {
+    width: 5rem;
+  }
+
+  /* 81% à 100% : Le texte disparaît brutalement pour recommencer */
+  81%,
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent);
+  }
 }
 
 @media (max-width: 991.98px) {
