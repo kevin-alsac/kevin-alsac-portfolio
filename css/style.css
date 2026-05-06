@@ -497,6 +497,28 @@ section {
   transform: translateY(-2px);
 }
 
+.social-box i {
+  font-size: 1.7rem;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.github-icon {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(39%) saturate(1552%)
+    hue-rotate(232deg) brightness(101%) contrast(101%)
+    drop-shadow(0 0 6px rgba(193, 92, 255, 0.45));
+}
+
+.linkedin-icon {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(89%) saturate(1800%)
+    hue-rotate(355deg) brightness(103%) contrast(101%)
+    drop-shadow(0 0 6px rgba(255, 138, 61, 0.45));
+}
+
 /* FIN PARTIE CONTACT */
 /* PARTIE FOOTER */
 
