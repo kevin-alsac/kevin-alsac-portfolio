@@ -420,6 +420,15 @@ section {
   margin-bottom: 0.35rem;
 }
 
+.timeline-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.timeline-list li {
+  padding-left: 0;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -433,25 +442,6 @@ section {
   transform: translateY(0);
 }
 
-.timeline-list {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.timeline-list li {
-  position: relative;
-  padding-left: 1rem;
-  margin-bottom: 3px;
-}
-
-.timeline-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #ff7ac6;
-}
-
 .typing-text {
   display: inline-block;
   white-space: nowrap;
@@ -459,7 +449,7 @@ section {
   border-right: 2px solid var(--accent);
   width: 0;
   animation:
-    typing 8s steps(8, end) infinite,
+    typing 7s steps(8, end) infinite,
     blink 0.8s infinite;
 }
 
