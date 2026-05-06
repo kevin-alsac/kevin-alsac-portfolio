@@ -396,10 +396,125 @@ section {
   );
 }
 
+/* PARTIE CONTACT */
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.social-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  border: 1px solid rgba(193, 92, 255, 0.25);
+  background: rgba(193, 92, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.social-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-2);
+  background: rgba(255, 138, 61, 0.08);
+  color: white;
+}
+
+.contact-form-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.custom-input {
+  background: rgba(5, 2, 10, 0.95);
+  border: 1px solid rgba(193, 92, 255, 0.22);
+  border-radius: 14px;
+  color: white;
+  padding: 0.9rem 1rem;
+}
+
+.custom-input:focus {
+  background: rgba(5, 2, 10, 0.95);
+  border-color: var(--accent);
+  box-shadow: none;
+  color: white;
+}
+
+.custom-input::placeholder {
+  color: #8f82a3;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.btn-submit-contact {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: transform 0.2s ease;
+}
+
+.btn-submit-contact:hover {
+  transform: translateY(-2px);
+}
+
+/* FIN PARTIE CONTACT */
+/* PARTIE FOOTER */
+
+.footer-links a {
+  color: #b99ed2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-2);
+}
+
 .timeline-item {
   position: relative;
   padding-bottom: 1.8rem;
 }
+/* FIN PARTIE FOOTER */
 
 .timeline-item::before {
   content: "";

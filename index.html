@@ -584,33 +584,95 @@
           </div>
         </div>
       </section>
-
       <section id="contact">
         <div class="container">
           <div class="text-center mb-5 reveal">
             <div class="section-label">Contact</div>
             <h2 class="section-title title-accent">
-              Restons en <span class="gradient-text">contact</span>
+              Me <span class="gradient-text">contacter</span>
             </h2>
+            <p class="section-text mt-3">
+              N’hésitez pas à me contacter pour toute opportunité de stage
+            </p>
           </div>
 
-          <div class="row g-4">
-            <div class="col-md-4 reveal">
-              <div class="contact-card p-4">
-                <div class="text-secondary small mb-2">Email</div>
-                <div>ton.email@exemple.com</div>
+          <div class="row g-5 align-items-start">
+            <!-- Infos -->
+            <div class="col-lg-5 reveal">
+              <h3 class="fw-bold mb-4">Informations de contact</h3>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">✉</div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">kevin.alsac@proton.me</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">⌖</div>
+                <div>
+                  <div class="contact-label">Localisation</div>
+                  <div class="contact-value">Val De Marne, France</div>
+                </div>
+              </div>
+
+              <h4 class="fw-bold mt-5 mb-4">Réseaux sociaux</h4>
+
+              <div class="d-flex gap-3">
+                <a href="#" class="social-box">GitHub</a>
+                <a
+                  href="https://www.linkedin.com/in/k%C3%A9vin-alsac/"
+                  class="social-box"
+                  >LinkedIn</a
+                >
               </div>
             </div>
-            <div class="col-md-4 reveal">
-              <div class="contact-card p-4">
-                <div class="text-secondary small mb-2">GitHub</div>
-                <div>github.com/tonprofil</div>
-              </div>
-            </div>
-            <div class="col-md-4 reveal">
-              <div class="contact-card p-4">
-                <div class="text-secondary small mb-2">LinkedIn</div>
-                <div>linkedin.com/in/tonprofil</div>
+
+            <!-- Formulaire -->
+            <div class="col-lg-7 reveal">
+              <div class="contact-form-card">
+                <form>
+                  <div class="mb-4">
+                    <label class="form-label">Nom complet</label>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      placeholder="Votre nom"
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control custom-input"
+                      placeholder="votre@email.com"
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label">Sujet</label>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      placeholder="Sujet de votre message"
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label">Message</label>
+                    <textarea
+                      class="form-control custom-input"
+                      rows="6"
+                      placeholder="Votre message..."
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn-submit-contact">
+                    Envoyer le message ✈
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -618,12 +680,19 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer-simple">
       <div
-        class="container d-flex flex-column flex-md-row justify-content-between gap-2"
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
       >
-        <span>Portfolio Admin Système / DevOps</span>
-        <span>HTML, CSS, Bootstrap et JavaScript natif</span>
+        <div class="footer-name">
+          © 2026 Kévin ALSAC — Portfolio BTS SIO SISR
+        </div>
+
+        <div class="footer-links">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#legalModal">
+            Mentions légales
+          </a>
+        </div>
       </div>
     </footer>
     <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
