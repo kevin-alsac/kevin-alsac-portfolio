@@ -14,118 +14,130 @@ document.addEventListener("DOMContentLoaded", () => {
   // Contenu des compétences
   const skillsData = {
     "Windows Server": `
-      <ul>
-        <li>Installation et administration Windows Server</li>
-        <li>Gestion Active Directory</li>
-        <li>Configuration DNS / DHCP</li>
-        <li>Déploiement de GPO</li>
-        <li>Gestion des utilisateurs et groupes</li>
-      </ul>
-    `,
+    <ul>
+      <li>Installation et administration Windows Server</li>
+      <li>Gestion Active Directory</li>
+      <li>Configuration DNS / DHCP</li>
+      <li>Déploiement de GPO</li>
+      <li>Gestion des utilisateurs et groupes</li>
+    </ul>
+  `,
 
     Windows: `
-      <ul>
-        <li>Support et maintenance des postes</li>
-        <li>Diagnostic des incidents utilisateurs</li>
-        <li>Installation de logiciels</li>
-        <li>Configuration système</li>
-      </ul>
-    `,
-
-    Linux: `
-      <ul>
-        <li>Administration Linux</li>
-        <li>Gestion des permissions</li>
-        <li>Services système</li>
-        <li>Scripts Bash</li>
-        <li>Maintenance serveur</li>
-      </ul>
-    `,
+    <ul>
+      <li>Support et maintenance des postes</li>
+      <li>Diagnostic des incidents utilisateurs</li>
+      <li>Installation de logiciels</li>
+      <li>Configuration système</li>
+    </ul>
+  `,
 
     Debian: `
-      <ul>
-        <li>Déploiement de services</li>
-        <li>Gestion des paquets APT</li>
-        <li>Configuration réseau</li>
-        <li>Administration SSH</li>
-      </ul>
-    `,
+    <ul>
+      <li>Déploiement de services Linux</li>
+      <li>Gestion des paquets APT</li>
+      <li>Configuration réseau</li>
+      <li>Administration SSH</li>
+    </ul>
+  `,
 
     Ubuntu: `
-      <ul>
-        <li>Installation et configuration système</li>
-        <li>Gestion des services Linux</li>
-        <li>Tests et environnements de laboratoire</li>
-      </ul>
-    `,
+    <ul>
+      <li>Installation et configuration système</li>
+      <li>Gestion des services Linux</li>
+      <li>Tests et environnements de laboratoire</li>
+    </ul>
+  `,
 
     Cisco: `
-      <ul>
-        <li>Configuration de ports de switch</li>
-        <li>Segmentation réseau VLAN</li>
-        <li>Brassage réseau</li>
-        <li>Modules SFP fibre optique</li>
-      </ul>
-    `,
+    <ul>
+      <li>Configuration de ports de switch</li>
+      <li>Segmentation réseau VLAN</li>
+      <li>Brassage réseau</li>
+      <li>Installation de modules SFP fibre</li>
+    </ul>
+  `,
 
-    "Active Directory": `
-      <ul>
-        <li>Gestion des utilisateurs</li>
-        <li>Organisation des OU</li>
-        <li>Gestion des droits</li>
-        <li>Authentification centralisée</li>
-      </ul>
-    `,
+    Tailscale: `
+    <ul>
+      <li>Accès distant sécurisé en réseau privé</li>
+      <li>Architecture Zero Trust</li>
+      <li>Connexion sans ouverture de ports</li>
+      <li>Utilisation avec MFA et appareils autorisés</li>
+    </ul>
+  `,
 
-    "DNS / DHCP": `
-      <ul>
-        <li>Configuration DNS</li>
-        <li>Attribution DHCP</li>
-        <li>Résolution de noms</li>
-        <li>Gestion réseau locale</li>
-      </ul>
-    `,
+    Pfsense: `
+    <ul>
+      <li>Découverte du pare-feu PfSense</li>
+      <li>Configuration réseau et filtrage</li>
+      <li>Segmentation logique et sécurité</li>
+      <li>Tests de règles réseau</li>
+    </ul>
+  `,
 
-    GPO: `
-      <ul>
-        <li>Déploiement de configurations</li>
-        <li>Stratégies de sécurité</li>
-        <li>Automatisation Windows</li>
-      </ul>
-    `,
-
-    Docker: `
-      <ul>
-        <li>Déploiement de conteneurs</li>
-        <li>Docker Compose</li>
-        <li>Gestion des volumes</li>
-        <li>Isolation des services</li>
-      </ul>
-    `,
+    "OCS inventory": `
+    <ul>
+      <li>Inventaire automatisé du parc informatique</li>
+      <li>Collecte des informations matérielles</li>
+      <li>Suivi des équipements</li>
+      <li>Intégration avec la gestion de parc</li>
+    </ul>
+  `,
 
     GLPI: `
-      <ul>
-        <li>Gestion des tickets</li>
-        <li>Suivi des incidents</li>
-        <li>Support utilisateurs</li>
-      </ul>
-    `,
+    <ul>
+      <li>Gestion des tickets d’incidents</li>
+      <li>Support utilisateurs</li>
+      <li>Suivi des demandes et interventions</li>
+      <li>Gestion de parc informatique</li>
+    </ul>
+  `,
 
     WAPT: `
-      <ul>
-        <li>Déploiement logiciel centralisé</li>
-        <li>Intégration Active Directory</li>
-        <li>Gestion des paquets</li>
-      </ul>
-    `,
+    <ul>
+      <li>Déploiement logiciel centralisé</li>
+      <li>Intégration Active Directory</li>
+      <li>Gestion et distribution de paquets</li>
+      <li>Administration du parc Windows</li>
+    </ul>
+  `,
 
     "Git / GitHub": `
-      <ul>
-        <li>Gestion de versions Git</li>
-        <li>Push / Pull / Branches</li>
-        <li>Hébergement de projets GitHub</li>
-      </ul>
-    `,
+    <ul>
+      <li>Gestion de versions Git</li>
+      <li>Push / Pull / gestion de branches</li>
+      <li>Hébergement de projets GitHub</li>
+      <li>Suivi des modifications de projets</li>
+    </ul>
+  `,
+
+    Azure: `
+    <ul>
+      <li>Découverte des services Microsoft Azure</li>
+      <li>Machines virtuelles et services cloud</li>
+      <li>Gestion des ressources Azure</li>
+      <li>Préparation certification AZ-900</li>
+    </ul>
+  `,
+
+    Portainer: `
+    <ul>
+      <li>Administration d’environnements Docker</li>
+      <li>Gestion des conteneurs et stacks</li>
+      <li>Déploiement via interface web</li>
+      <li>Supervision simplifiée des services</li>
+    </ul>
+  `,
+
+    Docker: `
+  <ul>
+    <li>Découverte de Docker et des conteneurs</li>
+    <li>Déploiement de services auto-hébergés</li>
+    <li>Utilisation basique de Docker Compose</li>
+    <li>Gestion simple des volumes et réseaux</li>
+  </ul>
+`,
   };
 
   // Ouverture modal
