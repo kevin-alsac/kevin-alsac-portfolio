@@ -1,3 +1,133 @@
+/* Modal Compétence */
+.modal-skill {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-skill.active {
+  display: flex;
+}
+.modal-skill-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 3, 21, 0.85);
+  backdrop-filter: blur(2px);
+  animation: modalFadeIn 0.3s;
+}
+.modal-skill-content {
+  position: relative;
+  background: var(--surface);
+  border-radius: 22px;
+  box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.45);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 400px;
+  color: var(--text);
+  animation: modalPopIn 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-skill-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.modal-skill-header img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(193, 92, 255, 0.12);
+}
+.modal-skill-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-3),
+    var(--accent-2)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.modal-skill-body {
+  width: 100%;
+}
+.modal-skill-text {
+  width: 100%;
+  background: var(--bg-2);
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 1.2rem;
+  color: var(--text);
+  box-shadow: 0 1px 8px 0 rgba(193, 92, 255, 0.07);
+}
+
+.modal-skill-text ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.modal-skill-text li {
+  margin-bottom: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.modal-skill-text li:last-child {
+  margin-bottom: 0;
+}
+.modal-skill-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.3rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 2.1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 2;
+}
+.modal-skill-close:hover {
+  color: var(--accent-2);
+}
+@keyframes modalPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 :root {
   --bg: #05010b;
   --bg-2: #0a0315;
@@ -395,6 +525,58 @@ section {
     rgba(255, 138, 61, 0.4)
   );
 }
+
+/* PARTIE SKILLS */
+.skills-category {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.skills-category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(193, 92, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.skill-card span {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+}
+/* FIN PARTIE SKILLS */
 
 /* PARTIE CONTACT */
 .contact-info-item {

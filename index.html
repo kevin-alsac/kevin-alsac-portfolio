@@ -1,3 +1,17 @@
+<!-- Modal Compétence -->
+<div id="skillModal" class="modal-skill">
+  <div class="modal-skill-backdrop"></div>
+  <div class="modal-skill-content">
+    <button class="modal-skill-close" aria-label="Fermer">&times;</button>
+    <div class="modal-skill-header">
+      <img id="modalSkillImg" src="" alt="" />
+      <h3 id="modalSkillTitle"></h3>
+    </div>
+    <div class="modal-skill-body">
+      <div id="modalSkillContent" class="modal-skill-text"></div>
+    </div>
+  </div>
+</div>
 <!doctype html>
 <html lang="fr">
   <head>
@@ -191,108 +205,118 @@
             <h2 class="section-title title-accent">
               Compétences <span class="gradient-text">techniques</span>
             </h2>
+
+            <p class="section-text mt-3">
+              Technologies et environnements utilisés dans mes projets
+              personnels, mon homelab et ma formation BTS SIO SISR.
+            </p>
           </div>
 
-          <div class="row g-4">
-            <div class="col-lg-6 reveal">
-              <div class="skill-panel p-4 p-lg-5">
-                <h3 class="mini-title fs-3 mb-4">Systèmes & administration</h3>
+          <!-- SYSTEME -->
+          <div class="skills-category reveal">
+            <h3 class="skills-category-title">Système & administration</h3>
 
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Windows Server</span><span>85%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 85%"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Linux</span><span>60%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 60%"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Réseau & services</span><span>62%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 62%"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Sauvegarde & supervision</span><span>58%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 58%"
-                    ></div>
-                  </div>
-                </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img
+                  src="./assets/images/logos/microsoft.png"
+                  alt="Windows Server"
+                />
+                <span>Windows Server</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/microsoft.png" alt="Windows" />
+                <span>Windows</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/debian.png" alt="Debian" />
+                <span>Debian</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/ubuntu.png" alt="Ubuntu" />
+                <span>Ubuntu</span>
               </div>
             </div>
+          </div>
 
-            <div class="col-lg-6 reveal">
-              <div class="skill-panel p-4 p-lg-5">
-                <h3 class="mini-title fs-3 mb-4">Automatisation & Cloud</h3>
+          <!-- RESEAU -->
+          <div class="skills-category reveal mt-4">
+            <h3 class="skills-category-title">Réseau & infrastructure</h3>
 
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Microsoft Azure</span><span>55%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 55%"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Bash / scripting</span><span>50%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 50%"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Python</span><span>60%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 60%"
-                    ></div>
-                  </div>
-                </div>
-                <div class="progress-wrap">
-                  <div class="progress-label">
-                    <span>Sécurité d'accès</span><span>70%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar custom-bar"
-                      style="width: 70%"
-                    ></div>
-                  </div>
-                </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img src="./assets/images/logos/cisco.png" alt="Cisco" />
+                <span>Cisco</span>
+              </div>
+
+              <div class="skill-card">
+                <img
+                  src="./assets/images/logos/tailscale.png"
+                  alt="Tailscale"
+                />
+                <span>Tailscale</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/pfsense.png" alt="Pfsense" />
+                <span>Pfsense</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- OUTILS -->
+          <div class="skills-category reveal mt-4">
+            <h3 class="skills-category-title">Outils & services</h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img src="./assets/images/logos/ocsNg.png" alt="Ocs" />
+                <span>OCS inventory</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/glpi.png" alt="GLPI" />
+                <span>GLPI</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/wapt.png" alt="WAPT" />
+                <span>WAPT</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/git.png" alt="Git / GitHub" />
+                <span>Git / GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- OUTILS -->
+          <div class="skills-category reveal mt-4">
+            <h3 class="skills-category-title">Outils & services</h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img src="./assets/images/logos/ocsNg.png" alt="Ocs" />
+                <span>OCS inventory</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/glpi.png" alt="GLPI" />
+                <span>GLPI</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/wapt.png" alt="WAPT" />
+                <span>WAPT</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="./assets/images/logos/git.png" alt="Git / GitHub" />
+                <span>Git / GitHub</span>
               </div>
             </div>
           </div>
