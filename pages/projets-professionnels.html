@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets professionnels - Portfolio kévin ALSAC</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html#home">kévin ALSAC</a>
+        <button
+          class="navbar-toggler border-0 shadow-none bg-light-subtle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#skills">Compétences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html#projects">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects">← Retour aux projets</a>
+        <div class="page-intro mb-5">
+          <div class="section-label">Entreprise</div>
+          <h1 class="section-title title-accent">
+            Projets <span class="gradient-text">professionnels</span>
+          </h1>
+          <p class="section-text">
+            Cette page présente les réalisations menées en contexte
+            professionnel : support, administration, déploiement et amélioration
+            du parc informatique.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="project-list-card">
+              <div class="project-subtitle">Déploiement logiciel</div>
+              <h3 class="h4 mb-3">Serveur WAPT en environnement AD</h3>
+              <p class="card-text">
+                Préparation et intégration d'un serveur WAPT dans un domaine
+                Active Directory afin de centraliser le déploiement logiciel et
+                faciliter l'administration du parc.
+              </p>
+              <div class="project-card-actions">
+                <div class="project-card-chips">
+                  <span class="chip">WAPT</span>
+                  <span class="chip">Active Directory</span>
+                  <span class="chip">Windows Server</span>
+                </div>
+                <button
+                  class="btn btn-main project-detail-btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-wapt"
+                >
+                  Voir tout le projet
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="project-list-card">
+              <div class="project-subtitle">Projet à compléter</div>
+              <h3 class="h4 mb-3">Missions de stage</h3>
+              <p class="card-text">
+                Espace prévu pour détailler les interventions, procédures,
+                outils utilisés et compétences acquises en entreprise.
+              </p>
+              <div class="project-card-actions">
+                <div class="project-card-chips">
+                  <span class="chip">Support</span>
+                  <span class="chip">Maintenance</span>
+                  <span class="chip">Parc IT</span>
+                </div>
+                <button
+                  class="btn btn-main project-detail-btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-stage"
+                >
+                  Voir tout le projet
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="modal-wapt" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4">Serveur WAPT en environnement AD</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <p class="card-text">
+              Projet professionnel autour du déploiement logiciel centralisé
+              dans un environnement Windows et Active Directory.
+            </p>
+            <ul class="project-detail-list">
+              <li>Préparation du serveur WAPT et vérification des prérequis.</li>
+              <li>Intégration dans le domaine Active Directory.</li>
+              <li>Préparation de la gestion centralisée des paquets logiciels.</li>
+              <li>Objectif : simplifier l'administration et homogénéiser les postes.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-stage" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4">Missions de stage</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <p class="card-text">
+              Zone prévue pour détailler les missions réalisées en entreprise.
+            </p>
+            <ul class="project-detail-list">
+              <li>Contexte de l'entreprise et besoin identifié.</li>
+              <li>Actions réalisées et outils utilisés.</li>
+              <li>Difficultés rencontrées et solutions appliquées.</li>
+              <li>Compétences professionnelles mobilisées.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

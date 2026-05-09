@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets personnels - Portfolio kévin ALSAC</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html#home">kévin ALSAC</a>
+        <button
+          class="navbar-toggler border-0 shadow-none bg-light-subtle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#skills">Compétences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html#projects">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects">← Retour aux projets</a>
+        <div class="page-intro mb-5">
+          <div class="section-label">Homelab</div>
+          <h1 class="section-title title-accent">
+            Projets <span class="gradient-text">personnels</span>
+          </h1>
+          <p class="section-text">
+            Cette page rassemble les projets réalisés en autonomie autour de
+            l'auto-hébergement, de Linux, de Docker, de la sauvegarde et de la
+            sécurité.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="project-list-card">
+              <div class="project-subtitle">Environnement personnel sécurisé</div>
+              <h3 class="h4 mb-3">Homelab sécurisé</h3>
+              <p class="card-text">
+                Mise en place d'un environnement auto-hébergé sur Raspberry Pi 5
+                avec stockage NVMe chiffré, accès distant Zero Trust via
+                Tailscale et sauvegardes automatiques vers NAS.
+              </p>
+              <div class="project-card-actions">
+                <div class="project-card-chips">
+                  <span class="chip">Raspberry Pi 5</span>
+                  <span class="chip">LUKS</span>
+                  <span class="chip">Tailscale</span>
+                </div>
+                <button
+                  class="btn btn-main project-detail-btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-homelab"
+                >
+                  Voir tout le projet
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="project-list-card">
+              <div class="project-subtitle">Service photo auto-hébergé</div>
+              <h3 class="h4 mb-3">Déploiement Immich</h3>
+              <p class="card-text">
+                Déploiement d'une solution de gestion photo self-hosted avec
+                persistance des données, accès distant sécurisé et stratégie de
+                sauvegarde.
+              </p>
+              <div class="project-card-actions">
+                <div class="project-card-chips">
+                  <span class="chip">Docker</span>
+                  <span class="chip">Compose</span>
+                  <span class="chip">Volumes</span>
+                </div>
+                <button
+                  class="btn btn-main project-detail-btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-immich"
+                >
+                  Voir tout le projet
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="modal-homelab" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4">Homelab sécurisé</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <p class="card-text">
+              Projet personnel orienté sécurité, stockage et accès distant privé
+              pour maintenir un environnement auto-hébergé fiable.
+            </p>
+            <ul class="project-detail-list">
+              <li>Raspberry Pi 5 utilisé comme base de l'environnement.</li>
+              <li>Stockage NVMe chiffré avec LUKS.</li>
+              <li>Accès distant via Tailscale, sans ouverture de port sur la box.</li>
+              <li>Sauvegardes automatiques vers un NAS TerraMaster.</li>
+              <li>Objectif : garder un accès simple, sécurisé et maintenable.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-immich" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4">Déploiement Immich</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <p class="card-text">
+              Déploiement d'un service photo auto-hébergé pour centraliser,
+              consulter et sauvegarder une bibliothèque personnelle.
+            </p>
+            <ul class="project-detail-list">
+              <li>Déploiement du service avec Docker et Docker Compose.</li>
+              <li>Organisation des volumes pour conserver les données.</li>
+              <li>Accès distant privé et contrôlé.</li>
+              <li>Intégration du service dans la stratégie de sauvegarde.</li>
+              <li>Objectif : héberger ses données sans dépendre uniquement d'un cloud externe.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

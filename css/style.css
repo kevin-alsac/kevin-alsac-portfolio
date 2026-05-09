@@ -463,6 +463,144 @@ section {
   margin-bottom: 0.45rem;
 }
 
+.project-category-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 8, 48, 0.98),
+    rgba(10, 3, 20, 0.98)
+  );
+  color: var(--text);
+  text-decoration: none;
+}
+
+.project-category-card:hover,
+.project-category-card:focus {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.project-category-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-category-card h3,
+.project-category-card .card-text {
+  color: var(--text) !important;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-2);
+  font-weight: 700;
+  margin: 0.7rem 0 0.45rem;
+}
+
+.project-link::after {
+  content: "→";
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.project-category-card:hover .project-link::after {
+  transform: translateX(4px);
+}
+
+.page-shell {
+  padding: 8rem 0 3rem;
+}
+
+.page-intro {
+  max-width: 760px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-2);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+.project-list-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.4rem;
+  height: 100%;
+}
+
+.project-list-card h3 {
+  color: var(--text);
+}
+
+.project-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.project-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.project-card-chips .chip {
+  margin: 0;
+}
+
+.project-detail-btn {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.project-detail-modal {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.project-detail-modal .modal-header,
+.project-detail-modal .modal-footer {
+  border-color: rgba(193, 92, 255, 0.16);
+}
+
+.project-detail-modal .modal-title {
+  font-weight: 800;
+}
+
+.project-detail-modal .btn-close {
+  filter: invert(1);
+}
+
+.project-detail-list {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
 .progress-wrap {
   margin-top: 1.1rem;
 }
