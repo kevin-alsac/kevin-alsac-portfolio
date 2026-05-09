@@ -319,15 +319,6 @@ a {
   transform: translateY(-1px);
 }
 
-.btn-alt {
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 138, 61, 0.35);
-  border-radius: 14px;
-  padding: 0.9rem 1.25rem;
-  font-weight: 700;
-}
-
 .btn-alt:hover {
   background: rgba(255, 138, 61, 0.08);
   color: #fff;
@@ -578,6 +569,47 @@ section {
 }
 /* FIN PARTIE SKILLS */
 
+/* PARTIE CSS CV */
+.btn-cv {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border: 1px solid rgba(193, 92, 255, 0.25);
+  border-radius: 14px;
+  padding: 0.9rem 1.25rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btn-cv:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-2);
+  background: rgba(255, 138, 61, 0.08);
+  color: white;
+}
+/*FIN PARTIE CSS CV */
+/* PARTIE BUTTON CERTIFICATS AZURE */
+.btn-certif {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(193, 92, 255, 0.25);
+  background: rgba(193, 92, 255, 0.06);
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-certif:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-2);
+  background: rgba(255, 138, 61, 0.08);
+  color: white;
+}
+/* FIN PARTIE BUTTON CERTIFICATS AZURE */
+
 /* PARTIE CONTACT */
 .contact-info-item {
   display: flex;
@@ -719,6 +751,41 @@ section {
   padding-bottom: 1.8rem;
 }
 /* FIN PARTIE FOOTER */
+/* MENTIONS LEGALES */
+.legal-modal-content {
+  background: rgba(14, 3, 24, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  color: var(--text);
+  backdrop-filter: blur(14px);
+}
+
+.legal-modal-body {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.legal-modal-body h6 {
+  color: var(--accent-2);
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-modal-body a {
+  color: var(--accent);
+}
+
+.legal-modal-body hr {
+  border-color: rgba(193, 92, 255, 0.15);
+  margin: 1.5rem 0;
+}
+.modal-backdrop.show {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 1 !important;
+}
+/* FIN MENTIONS LEGALES */
 
 .timeline-item::before {
   content: "";
