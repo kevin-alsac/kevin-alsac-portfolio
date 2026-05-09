@@ -591,12 +591,6 @@ section {
   font-weight: 800;
 }
 
-.project-modal-download {
-  margin-left: auto;
-  margin-right: 0.35rem;
-  white-space: nowrap;
-}
-
 .project-detail-modal .btn-close {
   filter: invert(1);
 }
@@ -687,6 +681,15 @@ section {
 
 .stage-task {
   margin-top: 1rem;
+}
+
+.stage-report-notice {
+  background: rgba(255, 138, 61, 0.08);
+  border-color: rgba(255, 138, 61, 0.28);
+}
+
+.stage-report-notice h4 {
+  color: var(--accent-2);
 }
 
 .stage-date {
@@ -1151,8 +1154,4 @@ footer {
     gap: 0.7rem;
   }
 
-  .project-modal-download {
-    margin-left: 0;
-    margin-right: 0;
-  }
 }

@@ -122,13 +122,6 @@
         <div class="modal-content project-detail-modal">
           <div class="modal-header">
             <h2 class="modal-title h4">Stage 1ère année - service réseau et téléphonie</h2>
-            <a
-              class="btn btn-main project-modal-download"
-              href="../assets/documents/rapport-stage-1ere-annee.pdf"
-              download
-            >
-              Télécharger le PDF
-            </a>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
           <div class="modal-body">
@@ -152,261 +145,131 @@
               </section>
 
               <section class="stage-report-section">
-                <h4>1. Présentation des acteurs</h4>
+                <h4>Résumé du stage</h4>
+                <p>
+                  Pendant quatre semaines, j'ai intégré le service informatique
+                  de l'hôpital en renfort sur les missions réseau et téléphonie.
+                  Les interventions concernaient principalement la continuité du
+                  réseau, la téléphonie IP, le brassage, les VLAN, le suivi GLPI
+                  et la vérification d'équipements Cisco.
+                </p>
                 <div class="stage-report-grid">
                   <div>
-                    <h5>MOA (Maîtrise d'Ouvrage)</h5>
-                    <p>Service ou personne à l'origine de la demande.</p>
+                    <h5>Contexte</h5>
                     <ul class="project-detail-list">
-                      <li>Un service hospitalier (Urgences, Radiologie, Laboratoire, cuisine, lingerie...)</li>
-                      <li>Service des travaux / services techniques (dans le cadre de contraintes liées aux aménagements)</li>
+                      <li>Environnement hospitalier avec des services sensibles.</li>
+                      <li>Infrastructure basée sur des commutateurs Cisco, des VLAN et de la téléphonie IP.</li>
+                      <li>Suivi des demandes et incidents via GLPI.</li>
                     </ul>
                   </div>
                   <div>
-                    <h5>MOE (Maîtrise d'Œuvre)</h5>
-                    <p>Service ou personne responsable de la réalisation technique.</p>
+                    <h5>Objectifs</h5>
                     <ul class="project-detail-list">
-                      <li>Moi-même, stagiaire technicien réseau et téléphonie au sein du service informatique de l'hôpital de Villeneuve-Saint-Georges</li>
-                      <li>Mon référent faisant partie du service réseau et téléphonie</li>
-                    </ul>
-                  </div>
-                </div>
-                <h5>Mon rôle</h5>
-                <ul class="project-detail-list">
-                  <li>Participation à la maintenance du réseau interne (commutateurs, VLAN, brassage)</li>
-                  <li>Participation à la gestion de la téléphonie IP (déploiement, configuration, dépannage)</li>
-                  <li>Intervention sur les tickets utilisateurs (réseau, téléphonie, câblage)</li>
-                </ul>
-              </section>
-
-              <section class="stage-report-section">
-                <h4>2. Cahier des charges</h4>
-                <div class="stage-report-grid">
-                  <div>
-                    <h5>Objectifs principaux des missions</h5>
-                    <ul class="project-detail-list">
-                      <li>Assurer la continuité du réseau informatique de l'hôpital</li>
-                      <li>Participer au maintien de la téléphonie interne (VoIP)</li>
-                      <li>Réorganiser ou maintenir le câblage réseau dans les services</li>
-                      <li>Configurer ou dépanner des équipements réseau (commutateurs, téléphones IP)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5>Utilisateurs concernés</h5>
-                    <ul class="project-detail-list">
-                      <li>Personnel médical (médecins, infirmiers, aides-soignants)</li>
-                      <li>Personnel administratif</li>
-                      <li>Services techniques</li>
-                      <li>Standard téléphonique</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5>Description de l'existant</h5>
-                    <ul class="project-detail-list">
-                      <li>Infrastructure réseau basée sur des commutateurs managés (Cisco)</li>
-                      <li>Réseau segmenté en VLAN (administrateur, serveur, imprimante, borne Wifi, Borne DECT, PC, caméra et téléphonie)</li>
-                      <li>Téléphonie IP (CISCO)</li>
-                      <li>Baies informatiques réparties dans plusieurs bâtiments, deux cœurs de réseau existant</li>
-                      <li>Système de tickets interne (GLPI)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5>Description des besoins</h5>
-                    <ul class="project-detail-list">
-                      <li>Déploiement ou remplacement de téléphones IP</li>
-                      <li>Configuration de ports réseau (Voix / Données)</li>
-                      <li>Brassage et organisation des baies (déplacement des baies)</li>
-                      <li>Vérification de la connectivité réseau</li>
-                      <li>Mise à jour de la documentation réseau (suite aux changements de commutateur)</li>
-                      <li>Intervention rapide en cas d'incident (services hospitaliers sensibles)</li>
-                    </ul>
-                  </div>
-                </div>
-                <h5>Délais et livrables</h5>
-                <ul class="project-detail-list">
-                  <li>Livrables : Traitement de tickets GLPI (livrable interne au service informatique)</li>
-                  <li>Délais : selon les priorités du service informatique (souvent urgences > services médicaux > standard > administratif)</li>
-                </ul>
-                <h5>Contraintes techniques</h5>
-                <ul class="project-detail-list">
-                  <li>Commutateurs managés (Cisco)</li>
-                  <li>Téléphonie IP (SIP, RTP)</li>
-                  <li>VLAN Voix / Données</li>
-                  <li>PoE pour téléphones IP</li>
-                  <li>Logiciels : Putty, Wireshark, GLPI, outils internes</li>
-                  <li>Contraintes légales : RGPD, confidentialité des données de santé</li>
-                </ul>
-              </section>
-
-              <section class="stage-report-section">
-                <h4>3. Organisation du suivi du projet</h4>
-                <div class="stage-report-grid">
-                  <div>
-                    <h5>Présentation de l'équipe</h5>
-                    <ul class="project-detail-list">
-                      <li>1 technicien réseau et téléphonie</li>
-                      <li>4 techniciens support informatique N1</li>
-                      <li>1 technicien gérant les caméras/interphones</li>
-                      <li>3 personnes de l'équipe projet</li>
-                      <li>2 administrateurs système</li>
-                      <li>1 administrateur gérant l'interopérabilité de plusieurs systèmes</li>
-                      <li>1 responsable du service informatique</li>
-                      <li>Moi-même en renfort sur les tâches réseau/téléphonie</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5>Méthode de gestion de projet</h5>
-                    <ul class="project-detail-list">
-                      <li>Organisation interne du service informatique</li>
-                      <li>Priorisation des interventions selon l'impact sur les soins</li>
-                      <li>Suivi via tickets (GLPI)</li>
-                    </ul>
-                    <h5>Organisation du suivi</h5>
-                    <ul class="project-detail-list">
-                      <li>Réunions ponctuelles selon les besoins</li>
+                      <li>Participer à la maintenance du réseau interne.</li>
+                      <li>Aider à la gestion de la téléphonie et des équipements réseau.</li>
+                      <li>Intervenir sur des besoins concrets des utilisateurs et services.</li>
                     </ul>
                   </div>
                 </div>
               </section>
 
+              <section class="stage-report-section stage-report-notice">
+                <h4>Détails complets</h4>
+                <p>
+                  Cette page présente une version résumée des missions. Pour les
+                  dates, procédures, commandes, validations, problèmes rencontrés
+                  et explications complètes, il faut télécharger le PDF du rapport
+                  de stage avec le bouton situé en bas de cette fenêtre.
+                </p>
+              </section>
+
               <section class="stage-report-section">
-                <h4>4. Description des tâches</h4>
+                <h4>Résumé des tâches réalisées</h4>
 
                 <article class="stage-task">
-                  <h5>Tâche n°1 : Mise en place d'un firewall préparé par le DSI et raccordement au cœur de réseau (en attente pour remplacement de l'ancien firewall)</h5>
+                  <h5>Tâche n°1 : Raccordement d'un firewall Palo Alto</h5>
                   <p class="stage-date">Date : 24/03/2026</p>
-                  <p><strong>Description</strong><br />Installation d'un firewall Palo Alto (Next-Generation Firewall, NGFW) préconfiguré par le DSI, destiné à sécuriser un segment réseau critique en remplacement d'un ancien firewall.</p>
-                  <p><strong>Réalisation</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Installation physique du firewall dans la baie.</li>
-                    <li>Raccordement au cœur de réseau (L3), lien court, installation en Ethernet</li>
-                    <li>Matériels utilisées : Firewall Palo Alto</li>
-                  </ul>
-                  <p><strong>Problèmes rencontrés</strong><br />Aucun problème majeur.</p>
-                  <p><strong>Validation</strong><br />Le firewall Palo Alto a été raccordé au cœur de réseau via des câbles Ethernet sur les interfaces prévues par le Directeur Technique. Les ports fibre n'étaient pas utilisés dans cette architecture, la liaison cuivre étant suffisante pour la distance.</p>
+                  <p>
+                    Installation physique et raccordement d'un firewall Palo Alto
+                    préconfiguré, prévu pour remplacer un ancien équipement de
+                    sécurité. L'objectif était de préparer son intégration au cœur
+                    de réseau dans de bonnes conditions.
+                  </p>
                 </article>
 
                 <article class="stage-task">
-                  <h5>Tâche n°2 : Mise en place de trois commutateurs Cisco Catalyst 9200 en stack dans une nouvelle baie informatique</h5>
+                  <h5>Tâche n°2 : Mise en place d'un stack Cisco Catalyst 9200</h5>
                   <p class="stage-date">Date : 26/03/2026</p>
-                  <p><strong>Description</strong><br />Installation physique et intégration de trois commutateurs Cisco déjà préconfigurés, destinés à renforcer la capacité réseau d'un service hospitalier. Les 3 commutateurs physiques fonctionnent donc comme un seul équipement logique (stack).</p>
-                  <p><strong>Réalisation</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Installation des trois commutateurs dans la baie réseau.</li>
-                    <li>Raccordement électrique et réseau.</li>
-                    <li>Mise en place des câbles de stacking. (Topologie en anneau sur 3 commutateurs)</li>
-                    <li>Raccordement de la liaison fibre optique (uplink)</li>
-                    <li>Vérification de la détection du stack par le commutateur maître (ou active)</li>
-                    <li>Contrôle des ports actifs et de la synchronisation.</li>
-                    <li>Technos utilisées : Cisco Catalyst, stacking, CLI, PuTTY</li>
-                  </ul>
+                  <p>
+                    Installation de trois commutateurs Cisco Catalyst 9200 dans
+                    une nouvelle baie informatique, avec câblage de stacking et
+                    raccordement réseau. Le stack permet aux trois commutateurs
+                    de fonctionner comme un seul équipement logique.
+                  </p>
                   <figure class="stage-report-figure">
                     <img src="../assets/images/stage-1/image1.png" alt="Schéma explicatif du stack de trois commutateurs Cisco Catalyst 9200" />
                     <figcaption>Schéma explicatif</figcaption>
                   </figure>
-                  <p><strong>Problèmes rencontrés</strong><br />Aucun</p>
-                  <p><strong>Gestion des tests</strong><br />Vérification du stack (grâce à la commande « show switch »).</p>
-                  <div class="stage-report-images">
-                    <figure class="stage-report-figure">
-                      <img src="../assets/images/stage-1/image2.png" alt="Résultat de la commande show switch" />
-                    </figure>
-                    <figure class="stage-report-figure">
-                      <img src="../assets/images/stage-1/image3.png" alt="Test de connectivité sur plusieurs ports" />
-                    </figure>
-                  </div>
-                  <p>Test de connectivité sur plusieurs ports.</p>
-                  <p><strong>Validation</strong><br />Validation par le technicien réseau (référent)</p>
                 </article>
 
                 <article class="stage-task">
-                  <h5>Tâche n°3 : Installation de modules SFP+ et création d'un nouveau lien fibre redondant entre le cœur de réseau n°2 et le commutateur du 3ᵉ étage</h5>
+                  <h5>Tâche n°3 : Création d'un lien fibre redondant</h5>
                   <p class="stage-date">Date : 07/04/2026</p>
-                  <p><strong>Description</strong><br />Dans le cadre de l'amélioration de la résilience du réseau, un nouveau lien fibre redondant a été mis en place entre le cœur de réseau n°2 (situé dans un autre bâtiment nommé « SIRIF ») et le commutateur Cisco Catalyst 9200 du 3ᵉ étage du bâtiment nommé « PFE ». Ce lien permet d'assurer la continuité de service en cas de défaillance du lien principal et d'augmenter la disponibilité du réseau de distribution.</p>
-                  <p>Le trajet fibre nécessite un passage par une baie intermédiaire située au niveau -1 avant d'atteindre le CDR2. Pour supporter ce nouveau lien, des modules SFP+ 10 Gb/s multimode OM4 (connecteur LC/LC) ont été installés sur les équipements concernés.</p>
+                  <p>
+                    Mise en place d'un lien fibre supplémentaire entre un cœur de
+                    réseau et un commutateur d'étage afin d'améliorer la
+                    résilience de l'infrastructure. Cette mission a inclus
+                    l'installation de modules SFP+, le raccordement des fibres et
+                    les vérifications de connectivité.
+                  </p>
                   <figure class="stage-report-figure">
                     <img src="../assets/images/stage-1/image4.png" alt="Schéma explicatif du lien fibre redondant" />
                     <figcaption>Schéma explicatif</figcaption>
                   </figure>
-                  <p><strong>Réalisation</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Vérification des ports disponibles sur le commutateur Cisco Catalyst 9200 du 3ᵉ étage et sur le cœur de réseau n°2 (SIRIF).</li>
-                    <li>Installation d'un module SFP+ 10 Gb/s multimode OM4 LC/LC sur le commutateur du 3ᵉ étage.</li>
-                    <li>Raccordement de la jarretière OM4 LC/LC entre le commutateur et le tiroir optique du 3ᵉ étage.</li>
-                    <li>Passage du lien via la fibre existante du bâtiment, transitant par le tiroir optique intermédiaire du niveau -1, avec raccordement entre tiroirs si nécessaire.</li>
-                    <li>Installation du second module SFP+ sur le commutateur du cœur de réseau n°2 (SIRIF).</li>
-                    <li>Raccordement de la jarretière OM4 LC/LC entre le tiroir optique du SIRIF et le commutateur du CDR2.</li>
-                    <li>Vérification de la détection des modules et de la montée des interfaces via la CLI (PuTTY).</li>
-                  </ul>
-                  <p><strong>Problèmes rencontrés</strong><br />Une jarretière inversée (Tx ↔ Tx) entraînant une interface en état down. Correction effectuée après réinsertion dans le sens de Tx ↔ Rx.</p>
-                  <p><strong>Gestion des tests</strong><br />Test de connectivité entre le commutateur du 3ᵉ étage et le cœur de réseau n°2 (ping, état des interfaces).</p>
-                  <ul class="project-detail-list">
-                    <li>Vérification de l'état du lien via : show interfaces status</li>
-                    <li>show interfaces tenGigabitEthernet X/X</li>
-                  </ul>
-                  <p><strong>Validation</strong><br />Le responsable du service informatique a validé l'installation physique. La configuration des ports, la mise en production et les vérifications avancées (redondance, absence de boucle...) ont été réalisées par le responsable informatique.</p>
                 </article>
 
                 <article class="stage-task">
-                  <h5>Tâche n°4 : Relevé des numéros de série DECT défectueux et préparation du formulaire de renvoie au SAV ASCOM</h5>
+                  <h5>Tâche n°4 : Préparation d'un retour SAV ASCOM</h5>
                   <p class="stage-date">Date : 09/04/2026</p>
-                  <p><strong>Description</strong><br />Récupération des téléphones DECT ne fonctionnant plus et préparation d'un formulaire SAV pour ASCOM.</p>
-                  <p><strong>Réalisation</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Relevé des numéros de série des DECT défectueux.</li>
-                    <li>Remplissage du formulaire SAV ASCOM.</li>
-                    <li>Transmission au service responsable.</li>
-                    <li>Matériel concerné : ASCOM, DECT, inventaire matériel.</li>
-                  </ul>
-                  <p><strong>Problèmes rencontrés</strong><br />Aucun</p>
-                  <p><strong>Validation</strong><br />Validation par le technicien téléphonique.</p>
+                  <p>
+                    Recensement de téléphones DECT défectueux, relevé des
+                    numéros de série et préparation des informations nécessaires
+                    pour l'envoi au SAV ASCOM.
+                  </p>
                 </article>
 
                 <article class="stage-task">
-                  <h5>Tâche n°5 : Remplacement d'un onduleur et intervention sur un commutateur non redémarré</h5>
+                  <h5>Tâche n°5 : Remplacement d'un onduleur et reprise réseau</h5>
                   <p class="stage-date">Date : 13/04/2026</p>
-                  <p><strong>Description</strong><br />Remplacement d'un onduleur dans une salle serveur alimentant plusieurs équipements réseaux à savoir serveurs, commutateurs et un cœur de réseau. Intervention sur un commutateur qui ne démarrait plus après la coupure électrique.</p>
-                  <p><strong>Réalisation</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Mise hors tension contrôlée.</li>
-                    <li>Déconnexion et retrait de l'ancien onduleur (réalisé par une société externe)</li>
-                    <li>Installation du nouvel onduleur. (réalisé par une société externe)</li>
-                    <li>Redémarrage des équipements.</li>
-                    <li>Détection d'un commutateur qui ne démarre plus</li>
-                    <li>Technos utilisées : Onduleur, Cisco L2.</li>
-                  </ul>
-                  <p><strong>Problèmes rencontrés</strong><br />Un commutateur ne redémarre pas → remplacement immédiat.</p>
-                  <p><strong>Gestion des tests</strong><br />Vérification visuelle si les ports étaient link up.</p>
-                  <p><strong>Validation</strong><br />Validation par le directeur technique</p>
+                  <p>
+                    Participation à une intervention en salle serveur lors du
+                    remplacement d'un onduleur. Après la remise sous tension, un
+                    commutateur ne redémarrait plus et a dû être remplacé pour
+                    rétablir le fonctionnement attendu.
+                  </p>
                 </article>
 
                 <article class="stage-task">
-                  <h5>Tâche n°6 : Dépannages réseau GLPI, configuration VLAN, Observium, TFTP</h5>
+                  <h5>Tâche n°6 : Dépannages réseau, VLAN, Observium et TFTP</h5>
                   <p class="stage-date">Dates : du 14/04/2026 au 17/04/2026</p>
-                  <p><strong>Description</strong><br />Interventions quotidiennes sur incidents réseau, configuration VLAN, remplacement d'un commutateur via export/import TFTP, et utilisation d'Observium pour identifier les ports disponibles.</p>
-                  <p><strong>Réalisation</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Traitement de tickets GLPI (services déménagés, mauvais VLAN, ports inactifs).</li>
-                    <li>Utilisation d'un outil de traçage de câbles réseau (toner + sonde) pour identifier les ports.</li>
-                    <li>Configuration VLAN selon les besoins des services.</li>
-                    <li>Utilisation d'Observium pour vérifier l'utilisation des ports et commutateurs en défaut.</li>
-                    <li>Export d'une configuration commutateur via TFTP.</li>
-                    <li>Import et adaptation de la configuration sur un nouveau commutateur L2.</li>
-                    <li>Remplacement d'un commutateur dans une salle de formation.</li>
-                    <li>Technos utilisées : Cisco CLI, TFTP, Observium, VLAN, GLPI.</li>
-                  </ul>
-                  <p><strong>Problèmes rencontrés</strong></p>
-                  <ul class="project-detail-list">
-                    <li>Ports mal identifiés → nécessité de tracer les câbles.</li>
-                    <li>Mauvais VLAN → impossibilité d'accéder aux imprimantes.</li>
-                  </ul>
-                  <p><strong>Gestion des tests</strong><br />Ping, DHCP, accès aux applications internes. Vérification Observium après modifications.</p>
-                  <p><strong>Validation</strong><br />Validation par le technicien réseau.</p>
+                  <p>
+                    Traitement de plusieurs incidents réseau : recherche de
+                    prises et ports, correction de VLAN, vérification de
+                    commutateurs avec Observium, sauvegarde ou reprise de
+                    configuration via TFTP et tests de connectivité.
+                  </p>
                 </article>
               </section>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+            <a
+              class="btn btn-main"
+              href="../assets/documents/rapport-stage-1ere-annee.pdf"
+              download
+            >
+              Télécharger le PDF
+            </a>
           </div>
         </div>
       </div>
