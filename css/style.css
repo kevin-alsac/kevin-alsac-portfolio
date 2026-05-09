@@ -591,6 +591,12 @@ section {
   font-weight: 800;
 }
 
+.project-modal-download {
+  margin-left: auto;
+  margin-right: 0.35rem;
+  white-space: nowrap;
+}
+
 .project-detail-modal .btn-close {
   filter: invert(1);
 }
@@ -599,6 +605,120 @@ section {
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 0;
+}
+
+.stage-report {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.stage-report-hero,
+.stage-report-section,
+.stage-task {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(193, 92, 255, 0.14);
+  border-radius: 18px;
+  padding: 1.2rem;
+}
+
+.stage-report-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.stage-report h3,
+.stage-report h4,
+.stage-report h5 {
+  color: var(--text);
+}
+
+.stage-report h3 {
+  margin: 0.4rem 0 0.75rem;
+  font-weight: 800;
+}
+
+.stage-report h4 {
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.stage-report h5 {
+  margin: 0.8rem 0 0.45rem;
+  font-weight: 750;
+}
+
+.stage-report p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.stage-report-place {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+  background: rgba(255, 138, 61, 0.08);
+  border: 1px solid rgba(255, 138, 61, 0.24);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.stage-report-place strong {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.stage-report-place-label {
+  width: fit-content;
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stage-report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stage-task {
+  margin-top: 1rem;
+}
+
+.stage-date {
+  color: var(--accent-2) !important;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.stage-report-figure {
+  margin: 1rem 0;
+}
+
+.stage-report-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  padding: 0.75rem;
+}
+
+.stage-report-figure figcaption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 0.45rem;
+}
+
+.stage-report-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
 }
 
 .progress-wrap {
@@ -1018,5 +1138,21 @@ footer {
 @media (max-width: 991.98px) {
   .hero {
     padding-top: 7.5rem;
+  }
+
+  .stage-report-hero,
+  .stage-report-grid,
+  .stage-report-images {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-modal .modal-header {
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .project-modal-download {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
