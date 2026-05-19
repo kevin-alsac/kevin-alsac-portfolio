@@ -3,6 +3,46 @@
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
+  // ===============================
+  // THEME CLAIR / SOMBRE
+  // ===============================
+
+  const themeToggle = document.querySelector(".theme-toggle");
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  const initialTheme = savedTheme || "dark";
+
+  const applyTheme = (theme) => {
+    document.documentElement.dataset.theme = theme;
+
+    if (themeToggle) {
+      const isLight = theme === "light";
+      themeToggle.setAttribute(
+        "aria-label",
+        isLight ? "Activer le mode sombre" : "Activer le mode clair",
+      );
+      themeToggle.setAttribute(
+        "title",
+        isLight ? "Activer le mode sombre" : "Activer le mode clair",
+      );
+    }
+  };
+
+  applyTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const nextTheme =
+        document.documentElement.dataset.theme === "light" ? "dark" : "light";
+
+      localStorage.setItem("portfolio-theme", nextTheme);
+      applyTheme(nextTheme);
+    });
+  }
+
+  // ===============================
+  // MODAL COMPETENCES
+  // ===============================
+
   const modal = document.getElementById("skillModal");
   const modalImg = document.getElementById("modalSkillImg");
   const modalTitle = document.getElementById("modalSkillTitle");
@@ -10,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeBtn = document.querySelector(".modal-skill-close");
   const backdrop = document.querySelector(".modal-skill-backdrop");
+
+  if (modal && modalImg && modalTitle && modalContent && closeBtn && backdrop) {
 
   // Contenu des compétences
   const skillsData = {
@@ -176,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   });
+  }
 
   // ===============================
   // ANIMATION REVEAL
@@ -203,26 +246,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("main section, header.hero");
   const navLinks = document.querySelectorAll(".nav-link");
 
-  const setActiveLink = () => {
-    let currentId = "home";
+  if (sections.length > 0) {
+    const setActiveLink = () => {
+      let currentId = "home";
 
-    sections.forEach((section) => {
-      const top = section.offsetTop - 120;
-      const height = section.offsetHeight;
+      sections.forEach((section) => {
+        const top = section.offsetTop - 120;
+        const height = section.offsetHeight;
 
-      if (window.scrollY >= top && window.scrollY < top + height) {
-        currentId = section.id;
-      }
-    });
+        if (window.scrollY >= top && window.scrollY < top + height) {
+          currentId = section.id;
+        }
+      });
 
-    navLinks.forEach((link) => {
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href") === `#${currentId}`,
-      );
-    });
-  };
+      navLinks.forEach((link) => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${currentId}`,
+        );
+      });
+    };
 
-  window.addEventListener("scroll", setActiveLink);
-  window.addEventListener("load", setActiveLink);
+    window.addEventListener("scroll", setActiveLink);
+    window.addEventListener("load", setActiveLink);
+  }
 });
