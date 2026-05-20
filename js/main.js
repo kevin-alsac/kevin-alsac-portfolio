@@ -25,6 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
         isLight ? "Activer le mode sombre" : "Activer le mode clair",
       );
     }
+
+    // Changement dynamique des icônes Portainer et Tailscale
+    const iconPortainer = document.getElementById("icon-portainer");
+    const iconTailscale = document.getElementById("icon-tailscale");
+    if (iconPortainer) {
+      iconPortainer.src = theme === "light"
+        ? "./assets/images/logos/portainerLight.png"
+        : "./assets/images/logos/portainer.png";
+    }
+    if (iconTailscale) {
+      iconTailscale.src = theme === "light"
+        ? "./assets/images/logos/tailscaleLight.png"
+        : "./assets/images/logos/tailscale.png";
+    }
   };
 
   applyTheme(initialTheme);
