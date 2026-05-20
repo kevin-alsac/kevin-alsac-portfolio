@@ -30,14 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconPortainer = document.getElementById("icon-portainer");
     const iconTailscale = document.getElementById("icon-tailscale");
     if (iconPortainer) {
-      iconPortainer.src = theme === "light"
-        ? "./assets/images/logos/portainerLight.png"
-        : "./assets/images/logos/portainer.png";
+      iconPortainer.src =
+        theme === "light"
+          ? "./assets/images/logos/portainerLight.png"
+          : "./assets/images/logos/portainer.png";
     }
     if (iconTailscale) {
-      iconTailscale.src = theme === "light"
-        ? "./assets/images/logos/tailscaleLight.png"
-        : "./assets/images/logos/tailscale.png";
+      iconTailscale.src =
+        theme === "light"
+          ? "./assets/images/logos/tailscaleLight.png"
+          : "./assets/images/logos/tailscale.png";
     }
   };
 
@@ -66,10 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const backdrop = document.querySelector(".modal-skill-backdrop");
 
   if (modal && modalImg && modalTitle && modalContent && closeBtn && backdrop) {
-
-  // Contenu des compétences
-  const skillsData = {
-    "Windows Server": `
+    // Contenu des compétences
+    const skillsData = {
+      "Windows Server": `
     <ul>
       <li>Installation et administration Windows Server</li>
       <li>Gestion Active Directory</li>
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Windows: `
+      Windows: `
     <ul>
       <li>Support et maintenance des postes</li>
       <li>Diagnostic des incidents utilisateurs</li>
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Debian: `
+      Debian: `
     <ul>
       <li>Déploiement de services Linux</li>
       <li>Gestion des paquets APT</li>
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Ubuntu: `
+      Ubuntu: `
     <ul>
       <li>Installation et configuration système</li>
       <li>Gestion des services Linux</li>
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Cisco: `
+      Cisco: `
     <ul>
       <li>Configuration de ports de switch</li>
       <li>Segmentation réseau VLAN</li>
@@ -114,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Tailscale: `
+      Tailscale: `
     <ul>
       <li>Accès distant sécurisé en réseau privé</li>
       <li>Architecture Zero Trust</li>
@@ -123,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Pfsense: `
+      Pfsense: `
     <ul>
       <li>Découverte du pare-feu PfSense</li>
       <li>Configuration réseau et filtrage</li>
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    "OCS inventory": `
+      "OCS inventory": `
     <ul>
       <li>Inventaire automatisé du parc informatique</li>
       <li>Collecte des informations matérielles</li>
@@ -141,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    GLPI: `
+      GLPI: `
     <ul>
       <li>Gestion des tickets d’incidents</li>
       <li>Support utilisateurs</li>
@@ -150,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    WAPT: `
+      WAPT: `
     <ul>
       <li>Déploiement logiciel centralisé</li>
       <li>Intégration Active Directory</li>
@@ -159,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    "Git / GitHub": `
+      "Git / GitHub": `
     <ul>
       <li>Gestion de versions Git</li>
       <li>Push / Pull / gestion de branches</li>
@@ -168,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Azure: `
+      Azure: `
     <ul>
       <li>Découverte des services Microsoft Azure</li>
       <li>Machines virtuelles et services cloud</li>
@@ -177,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Portainer: `
+      Portainer: `
     <ul>
       <li>Administration d’environnements Docker</li>
       <li>Gestion des conteneurs et stacks</li>
@@ -186,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
   `,
 
-    Docker: `
+      Docker: `
   <ul>
     <li>Découverte de Docker et des conteneurs</li>
     <li>Déploiement de services auto-hébergés</li>
@@ -194,44 +195,47 @@ document.addEventListener("DOMContentLoaded", () => {
     <li>Gestion simple des volumes et réseaux</li>
   </ul>
 `,
-  };
+    };
 
-  // Ouverture modal
-  document.querySelectorAll(".skills-category .skill-card").forEach((card) => {
-    card.style.cursor = "pointer";
+    // Ouverture modal
+    document
+      .querySelectorAll(".skills-category .skill-card")
+      .forEach((card) => {
+        card.style.cursor = "pointer";
 
-    card.addEventListener("click", () => {
-      const img = card.querySelector("img");
-      const span = card.querySelector("span");
+        card.addEventListener("click", () => {
+          const img = card.querySelector("img");
+          const span = card.querySelector("span");
 
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
 
-      modalTitle.textContent = span.textContent;
+          modalTitle.textContent = span.textContent;
 
-      modalContent.innerHTML =
-        skillsData[span.textContent] || "<p>Aucune information disponible.</p>";
+          modalContent.innerHTML =
+            skillsData[span.textContent] ||
+            "<p>Aucune information disponible.</p>";
 
-      modal.classList.add("active");
-    });
-  });
+          modal.classList.add("active");
+        });
+      });
 
-  // Fermeture modal
-  function closeModal() {
-    modal.classList.remove("active");
-  }
-
-  closeBtn.addEventListener("click", closeModal);
-  backdrop.addEventListener("click", closeModal);
-
-  document.addEventListener("keydown", (e) => {
-    if (
-      modal.classList.contains("active") &&
-      (e.key === "Escape" || e.key === "Esc")
-    ) {
-      closeModal();
+    // Fermeture modal
+    function closeModal() {
+      modal.classList.remove("active");
     }
-  });
+
+    closeBtn.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (
+        modal.classList.contains("active") &&
+        (e.key === "Escape" || e.key === "Esc")
+      ) {
+        closeModal();
+      }
+    });
   }
 
   // ===============================

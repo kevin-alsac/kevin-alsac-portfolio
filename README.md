@@ -27,4 +27,4 @@ Linux et solutions cloud.
 
 ## 🌐 Portfolio en ligne
 
-https://kevin-alsac.netlify.app
+https://kevinalsac.fr
