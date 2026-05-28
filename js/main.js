@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const themeToggle = document.querySelector(".theme-toggle");
   const savedTheme = localStorage.getItem("portfolio-theme");
-  const initialTheme = savedTheme || "dark";
+  const initialTheme = savedTheme || "light";
 
   const applyTheme = (theme) => {
     document.documentElement.dataset.theme = theme;
@@ -41,6 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
           ? "./assets/images/logos/tailscaleLight.png"
           : "./assets/images/logos/tailscale.png";
     }
+
+    document
+      .querySelectorAll("[data-theme-dark][data-theme-light]")
+      .forEach((image) => {
+        image.src =
+          theme === "light"
+            ? image.dataset.themeLight
+            : image.dataset.themeDark;
+      });
   };
 
   applyTheme(initialTheme);

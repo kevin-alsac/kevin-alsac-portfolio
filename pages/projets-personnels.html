@@ -31,10 +31,22 @@
               <a class="nav-link" href="../index.html#home">Accueil</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="../index.html#about">À propos</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="../index.html#skills">Compétences</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="../index.html#projects">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#diplomas">Diplômes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#experience">Expériences pro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#veille">Veille techno</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../index.html#contact">Contact</a>
@@ -129,26 +141,235 @@
     </main>
 
     <div class="modal fade" id="modal-homelab" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content project-detail-modal">
           <div class="modal-header">
-            <h2 class="modal-title h4">Homelab sécurisé</h2>
+            <h2 class="modal-title h4">Mon Homelab Raspberry Pi 5</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
           <div class="modal-body">
-            <p class="card-text">
-              Projet personnel orienté sécurité, stockage et accès distant privé
-              pour maintenir un environnement auto-hébergé fiable.
-            </p>
-            <ul class="project-detail-list">
-              <li>Raspberry Pi 5 utilisé comme base de l'environnement.</li>
-              <li>Stockage NVMe chiffré avec LUKS.</li>
-              <li>Accès distant via Tailscale, sans ouverture de port sur la box.</li>
-              <li>Sauvegardes automatiques vers un NAS TerraMaster.</li>
-              <li>Objectif : garder un accès simple, sécurisé et maintenable.</li>
-            </ul>
+            <div class="stage-report homelab-report">
+              <section class="stage-report-hero">
+                <div>
+                  <div class="project-subtitle">Vue globale du projet</div>
+                  <h3>Mon Homelab Raspberry Pi 5</h3>
+                  <p>
+                    Fiche explicative du projet, de l'architecture cible et de
+                    l'état d'avancement. L'objectif est de construire un serveur
+                    personnel fiable, documenté et sécurisé pour l'auto-hébergement.
+                  </p>
+                </div>
+                <div class="stage-report-place">
+                  <span class="stage-report-place-label">Architecture cible</span>
+                  <strong>Raspberry Pi 5 + Docker + stockage chiffré</strong>
+                  <span>Accès distant sécurisé avec Tailscale</span>
+                  <span>Services conteneurisés, HTTPS et Nextcloud</span>
+                  <span>Sauvegardes automatiques vers NAS TerraMaster</span>
+                </div>
+              </section>
+
+              <figure class="project-visual">
+                <img
+                  class="theme-aware-image"
+                  src="../assets/images/homelab-project/homelab-Dark.png"
+                  data-theme-dark="../assets/images/homelab-project/homelab-Dark.png"
+                  data-theme-light="../assets/images/homelab-project/homelab-Light.png"
+                  alt="Schéma de l'architecture du homelab Raspberry Pi 5 avec Tailscale, Docker, Nextcloud et sauvegardes NAS"
+                />
+                <figcaption>
+                  Schéma global du homelab : accès distant sécurisé, services
+                  Docker, Nextcloud et sauvegardes vers NAS.
+                </figcaption>
+              </figure>
+
+              <section class="stage-report-section">
+                <h4>Objectif</h4>
+                <p>
+                  Construire un homelab fiable et sécurisé sur Raspberry Pi 5,
+                  capable d'héberger des services personnels tout en gardant les
+                  données sensibles séparées, chiffrées et sauvegardées.
+                </p>
+                <div class="stage-report-grid">
+                  <div>
+                    <h5>Services prévus</h5>
+                    <ul class="project-detail-list">
+                      <li>Accès distant sécurisé.</li>
+                      <li>Services conteneurisés avec Docker.</li>
+                      <li>HTTPS pour les services exposés.</li>
+                      <li>Nextcloud pour les fichiers personnels.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5>Sécurité et continuité</h5>
+                    <ul class="project-detail-list">
+                      <li>Stockage chiffré avec LUKS.</li>
+                      <li>Accès privé via Tailscale.</li>
+                      <li>Sauvegardes automatiques vers NAS.</li>
+                      <li>Système séparé des données sensibles.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Matériel utilisé</h4>
+                <div class="project-table-wrap">
+                  <table class="project-info-table">
+                    <thead>
+                      <tr>
+                        <th>Matériel</th>
+                        <th>Détails</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Raspberry Pi</td>
+                        <td>Raspberry Pi 5</td>
+                      </tr>
+                      <tr>
+                        <td>RAM</td>
+                        <td>16 Go</td>
+                      </tr>
+                      <tr>
+                        <td>Stockage principal</td>
+                        <td>SSD NVMe 1 To</td>
+                      </tr>
+                      <tr>
+                        <td>OS</td>
+                        <td>Raspberry Pi OS Lite 64-bit</td>
+                      </tr>
+                      <tr>
+                        <td>Réseau</td>
+                        <td>Ethernet recommandé</td>
+                      </tr>
+                      <tr>
+                        <td>Accès distant</td>
+                        <td>Tailscale</td>
+                      </tr>
+                      <tr>
+                        <td>Sauvegardes</td>
+                        <td>NAS TerraMaster</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Système d'exploitation</h4>
+                <p>
+                  Image utilisée : <strong>Raspberry Pi OS Lite (64-bit)</strong>,
+                  un port de Debian Trixie sans environnement de bureau,
+                  compatible avec Raspberry Pi 3, 4, 400 et 5.
+                </p>
+                <div class="stage-report-grid">
+                  <div>
+                    <h5>Pourquoi cette version</h5>
+                    <ul class="project-detail-list">
+                      <li>Légère et sans interface graphique.</li>
+                      <li>Idéale pour un serveur et Docker.</li>
+                      <li>Consommation de ressources réduite.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5>Avantages serveur</h5>
+                    <ul class="project-detail-list">
+                      <li>Surface d'attaque plus faible.</li>
+                      <li>Consommation RAM réduite.</li>
+                      <li>Maintenance simplifiée.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Architecture du stockage</h4>
+                <div class="project-table-wrap">
+                  <table class="project-info-table">
+                    <thead>
+                      <tr>
+                        <th>Partition</th>
+                        <th>Rôle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>nvme0n1p1</td>
+                        <td>Boot Raspberry Pi</td>
+                      </tr>
+                      <tr>
+                        <td>nvme0n1p2</td>
+                        <td>Raspberry Pi OS</td>
+                      </tr>
+                      <tr>
+                        <td>nvme0n1p3</td>
+                        <td>Partition chiffrée LUKS</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="mb-0">
+                  Le système reste séparé des données sensibles. Les données
+                  Docker et Nextcloud seront stockées dans la partition chiffrée.
+                </p>
+              </section>
+
+              <section class="stage-report-section stage-report-notice">
+                <h4>Réseau</h4>
+                <p>
+                  Recommandation importante : configurer une IP fixe ou une
+                  réservation DHCP sur la box ou le routeur.
+                </p>
+                <ul class="project-detail-list">
+                  <li>Éviter que l'adresse IP du Raspberry Pi change.</li>
+                  <li>Garder un accès SSH stable.</li>
+                  <li>Éviter les problèmes avec Docker, Nextcloud et Tailscale.</li>
+                </ul>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Exemple d'architecture réseau</h4>
+                <pre class="project-code-block"><code>Internet
+   |
+   v
+Box / Routeur
+   |
+   +-- NAS
+   |
+   +-- Raspberry Pi 5
+         +-- Docker
+         +-- Nextcloud
+         +-- Tailscale
+         +-- Stockage LUKS</code></pre>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Structure du projet</h4>
+                <pre class="project-code-block"><code>mon-homelab-rpi5/
+|-- README.md
+|
++-- docs/
+    |-- 01_chiffrement_luks.md
+    |-- 02_connexion_ssh.md
+    |-- 03_deverouillage_manuel_luks.md
+    |-- 04_reseau_secu.md
+    |-- 05_docker_apps.md
+    |-- 06_nextcloud.md
+    |-- 07_nginx.md
+    |-- 08_client_nextcloud.md
+    +-- 09_sauvegardes.md</code></pre>
+              </section>
+            </div>
           </div>
           <div class="modal-footer">
+            <a
+              class="btn btn-main"
+              href="https://github.com/kevin-alsac/RPI-homelab-tutoriel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Voir le dépôt GitHub
+            </a>
             <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
           </div>
         </div>
