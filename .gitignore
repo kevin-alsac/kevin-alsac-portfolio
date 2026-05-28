@@ -1,2 +1,4 @@
 node_modules/
 .env
+# Dossier de sauvegarde images Portainer
+assets/images/logos/backup/
