@@ -757,6 +757,7 @@ section {
   color: var(--text);
   box-shadow: var(--shadow);
   overflow: hidden;
+  max-width: 100%;
 }
 
 .project-detail-modal .modal-header,
@@ -1447,5 +1448,71 @@ footer {
   .project-detail-modal .modal-header {
     align-items: flex-start;
     gap: 0.7rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal-dialog.modal-lg,
+  .modal-dialog.modal-xl {
+    width: calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+  }
+
+  .project-detail-modal {
+    border-radius: 16px;
+  }
+
+  .project-detail-modal .modal-header,
+  .project-detail-modal .modal-body,
+  .project-detail-modal .modal-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .project-detail-modal .modal-title {
+    min-width: 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .project-detail-modal .modal-body {
+    overflow-x: hidden;
+  }
+
+  .stage-report-hero,
+  .stage-report-section,
+  .stage-task,
+  .project-visual {
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .stage-report-place,
+  .project-detail-list,
+  .stage-report p,
+  .project-visual figcaption {
+    overflow-wrap: anywhere;
+  }
+
+  .project-info-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .project-info-table th,
+  .project-info-table td {
+    padding: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+
+  .project-info-table td:first-child {
+    white-space: normal;
+  }
+
+  .project-code-block {
+    max-width: 100%;
+    font-size: 0.82rem;
   }
 }
