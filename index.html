@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">kévin ALSAC</a>
         <button
@@ -33,17 +33,26 @@
             <li class="nav-item">
               <a class="nav-link" href="#about">À propos</a>
             </li>
+            <li class="nav-item dropdown nav-dropdown">
+              <button
+                class="nav-link dropdown-toggle border-0 bg-transparent"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Parcours <span class="nav-dropdown-arrow" aria-hidden="true"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#bts-sio">BTS SIO</a></li>
+                <li><a class="dropdown-item" href="#diplomas">Diplômes</a></li>
+                <li><a class="dropdown-item" href="#experience">Expériences pro</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">Compétences</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#diplomas">Diplômes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Expériences pro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#veille">Veille techno</a>
@@ -201,6 +210,115 @@
                   exposition minimale des services.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bts-sio" class="bts-sio-section">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <div class="section-label">Formation</div>
+            <h2 class="section-title title-accent">
+              Le <span class="gradient-text">BTS SIO</span>
+            </h2>
+            <p class="section-text bts-sio-intro mt-4 mb-0 mx-auto">
+              Le BTS Services Informatiques aux Organisations forme aux métiers
+              de l'informatique. Il permet de se spécialiser dans le
+              développement d'applications ou dans l'administration des
+              systèmes et réseaux.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-6 reveal">
+              <article class="bts-option-card bts-option-sisr p-4 p-lg-5">
+                <div class="bts-current-option">
+                  <span aria-hidden="true">✓</span> Mon parcours actuel
+                </div>
+                <div class="bts-option-heading">
+                  <div class="bts-option-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="3" y="4" width="18" height="6" rx="1.5"></rect>
+                      <rect x="3" y="14" width="18" height="6" rx="1.5"></rect>
+                      <path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="h3 mb-1">SISR</h3>
+                    <p class="bts-option-label mb-0">Parcours suivi</p>
+                  </div>
+                </div>
+
+                <div class="bts-option-section">
+                  <p class="bts-option-section-title">Compétences clés</p>
+                  <ul class="bts-option-skills" aria-label="Compétences SISR">
+                    <li>Réseaux &amp; infrastructures</li>
+                    <li>Administration systèmes</li>
+                    <li>Virtualisation</li>
+                    <li>Cybersécurité</li>
+                  </ul>
+                </div>
+
+                <p class="bts-option-description mb-0">
+                  L'option Solutions d'Infrastructure, Systèmes et Réseaux
+                  forme aux métiers liés à la conception, au déploiement et à
+                  la maintenance d'infrastructures ainsi qu'à l'administration
+                  des systèmes informatiques.
+                </p>
+
+                <div class="bts-careers">
+                  <p class="bts-option-section-title">Exemples de débouchés</p>
+                  <ul>
+                    <li>Administrateur systèmes et réseaux</li>
+                    <li>SysOps</li>
+                    <li>Technicien support ou infrastructure</li>
+                    <li>Technicien cybersécurité</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-6 reveal">
+              <article class="bts-option-card bts-option-slam p-4 p-lg-5">
+                <div class="bts-option-heading">
+                  <div class="bts-option-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="m8 5-7 7 7 7M16 5l7 7-7 7M14 3l-4 18"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="h3 mb-1">SLAM</h3>
+                    <p class="bts-option-label mb-0">L'option alternative</p>
+                  </div>
+                </div>
+
+                <div class="bts-option-section">
+                  <p class="bts-option-section-title">Compétences clés</p>
+                  <ul class="bts-option-skills" aria-label="Compétences SLAM">
+                    <li>Conception d'applications</li>
+                    <li>Bases de données</li>
+                    <li>Maintenance applicative</li>
+                    <li>Solutions de gestion</li>
+                  </ul>
+                </div>
+
+                <p class="bts-option-description mb-0">
+                  L'option Solutions Logicielles et Applications Métiers
+                  prépare aux métiers du développement d'applications, avec
+                  des compétences en programmation, en bases de données et en
+                  maintenance de solutions logicielles.
+                </p>
+
+                <div class="bts-careers">
+                  <p class="bts-option-section-title">Exemples de débouchés</p>
+                  <ul>
+                    <li>Développeur d'applications</li>
+                    <li>Développeur web</li>
+                    <li>Analyste programmeur</li>
+                  </ul>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -501,7 +619,7 @@
                 <div class="h6 mb-2">
                   Depuis 2025 — Centre Nationale d'Enseignement à Distance
                 </div>
-                <p class="timeline-text">
+                <p class="timeline-text mb-0">
                   Formation en systèmes et réseaux : administration,
                   infrastructures et services informatiques.
                 </p>

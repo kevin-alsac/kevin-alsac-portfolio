@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
       <div class="container">
         <a class="navbar-brand" href="../index.html#home">kévin ALSAC</a>
         <button
@@ -33,17 +33,26 @@
             <li class="nav-item">
               <a class="nav-link" href="../index.html#about">À propos</a>
             </li>
+            <li class="nav-item dropdown nav-dropdown">
+              <button
+                class="nav-link dropdown-toggle border-0 bg-transparent"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Parcours <span class="nav-dropdown-arrow" aria-hidden="true"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../index.html#bts-sio">BTS SIO</a></li>
+                <li><a class="dropdown-item" href="../index.html#diplomas">Diplômes</a></li>
+                <li><a class="dropdown-item" href="../index.html#experience">Expériences pro</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="../index.html#skills">Compétences</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="../index.html#projects">Projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#diplomas">Diplômes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#experience">Expériences pro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../index.html#veille">Veille techno</a>
@@ -82,24 +91,24 @@
         <div class="row g-4">
           <div class="col-lg-6">
             <article class="project-list-card">
-              <div class="project-subtitle">Projet de formation</div>
-              <h3 class="h4 mb-3">Infrastructure système et réseau</h3>
+              <div class="project-subtitle">Mission 1 · Support & maintenance</div>
+              <h3 class="h4 mb-3">Clé USB multi-outils de maintenance</h3>
               <p class="card-text">
-                Mise en place d'un environnement de test pour pratiquer
-                l'administration de services, la configuration réseau et la
-                sécurisation de base.
+                Conception d'une clé Ventoy regroupant systèmes live, antivirus
+                et outils de diagnostic pour intervenir sur des postes Windows
+                et Linux.
               </p>
               <div class="project-card-actions">
                 <div class="project-card-chips">
-                  <span class="chip">Windows Server</span>
-                  <span class="chip">Linux</span>
-                  <span class="chip">Réseau</span>
+                  <span class="chip">Ventoy</span>
+                  <span class="chip">Kali Linux</span>
+                  <span class="chip">Diagnostic</span>
                 </div>
                 <button
                   class="btn btn-main project-detail-btn"
                   type="button"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-infra"
+                  data-bs-target="#modal-maintenance"
                 >
                   Voir tout le projet
                 </button>
@@ -107,55 +116,292 @@
             </article>
           </div>
 
-          <!-- Projet en attente : Documentation de TP
           <div class="col-lg-6">
             <article class="project-list-card">
-              <div class="project-subtitle">Projet à compléter</div>
-              <h3 class="h4 mb-3">Documentation de TP</h3>
+              <div class="project-subtitle">Mission 2 · Sauvegarde</div>
+              <h3 class="h4 mb-3">Sauvegarde centralisée avec Veeam</h3>
               <p class="card-text">
-                Espace prévu pour présenter les travaux pratiques, procédures
-                techniques, schémas et captures importantes du parcours BTS SIO.
+                Mise en place et test d'une sauvegarde automatisée des données
+                utilisateurs vers un serveur de stockage Windows centralisé.
               </p>
               <div class="project-card-actions">
                 <div class="project-card-chips">
-                  <span class="chip">TP</span>
-                  <span class="chip">Documentation</span>
-                  <span class="chip">SISR</span>
+                  <span class="chip">Veeam Agent</span>
+                  <span class="chip">Windows Server</span>
+                  <span class="chip">Restauration</span>
                 </div>
                 <button
                   class="btn btn-main project-detail-btn"
                   type="button"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-doc-tp"
+                  data-bs-target="#modal-veeam"
                 >
                   Voir tout le projet
                 </button>
               </div>
             </article>
           </div>
-          -->
+
+          <div class="col-lg-6">
+            <article class="project-list-card">
+              <div class="project-subtitle">Mission 3 · Déploiement</div>
+              <h3 class="h4 mb-3">Déploiement d'images avec FOG Project</h3>
+              <p class="card-text">
+                Déploiement automatisé d'images Windows et Linux via le réseau,
+                grâce à un serveur FOG et au démarrage PXE.
+              </p>
+              <div class="project-card-actions">
+                <div class="project-card-chips">
+                  <span class="chip">FOG Project</span>
+                  <span class="chip">PXE</span>
+                  <span class="chip">Debian</span>
+                </div>
+                <button
+                  class="btn btn-main project-detail-btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-fog"
+                >
+                  Voir tout le projet
+                </button>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </main>
 
-    <div class="modal fade" id="modal-infra" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal fade" id="modal-maintenance" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content project-detail-modal">
           <div class="modal-header">
-            <h2 class="modal-title h4">Infrastructure système et réseau</h2>
+            <h2 class="modal-title h4">Clé USB multi-outils de maintenance</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
           <div class="modal-body">
-            <p class="card-text">
-              Projet orienté administration système et réseau dans un contexte
-              de formation BTS SIO SISR.
+            <div class="stage-report bts-project-report">
+              <section class="stage-report-hero">
+                <div>
+                  <div class="project-subtitle">Mission 1 · Support & maintenance</div>
+                  <h3>Clé USB multi-outils de maintenance</h3>
+                  <p>Création d'un support d'intervention portable permettant de diagnostiquer, désinfecter et maintenir des postes Windows et Linux.</p>
+                </div>
+                <div class="stage-report-place">
+                  <span class="stage-report-place-label">Environnement</span>
+                  <strong>Support informatique</strong>
+                  <span>Ventoy · Kali Linux · Windows 11</span>
+                  <span>Outils live et applications portables</span>
+                  <span>Tests réalisés sous VMware</span>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Contexte et choix de la solution</h4>
+                <div class="stage-report-grid">
+                  <div>
+                    <h5>Besoin identifié</h5>
+                    <p>Les techniciens doivent pouvoir intervenir rapidement sur des postes en panne ou infectés, y compris hors du domaine Active Directory.</p>
+                  </div>
+                  <div>
+                    <h5>Choix de Ventoy</h5>
+                    <p>Ventoy a été retenu pour sa compatibilité avec les machines récentes et sa gestion simple de plusieurs ISO par glisser-déposer.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Conception de la clé</h4>
+                <article class="stage-task">
+                  <h5>Configuration de l'amorçage</h5>
+                  <p>Paramétrage du clavier AZERTY et du français, puis ajout des images Kali Linux, Windows 11, Avira Rescue System, Dr.Web LiveDisk, Kaspersky Rescue Disk et MemTest86+.</p>
+                </article>
+                <article class="stage-task">
+                  <h5>Sélection des outils portables</h5>
+                  <p>Organisation des outils Windows et Linux : Wireshark, Advanced IP Scanner, NetSetMan, HWiNFO, CrystalDiskInfo, GpuTest, LibreOffice et FastCopy.</p>
+                </article>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Tests et validations</h4>
+                <article class="stage-task">
+                  <h5>Diagnostic matériel et stockage</h5>
+                  <p>Exécution de MemTest86+ puis utilisation de GParted dans Kali Linux pour préparer un disque de test en table GPT avec partition NTFS.</p>
+                </article>
+                <article class="stage-task">
+                  <h5>Analyse antivirus</h5>
+                  <p>Démarrage d'Avira Rescue System, contrôle du montage de la partition système et lancement d'une analyse complète.</p>
+                </article>
+              </section>
+
+              <section class="stage-report-section stage-report-notice">
+                <h4>Résultat</h4>
+                <p>La clé USB regroupe les outils essentiels de diagnostic, maintenance et récupération dans un support autonome, réutilisable sur différents postes.</p>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-veeam" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4">Sauvegarde centralisée avec Veeam</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <div class="stage-report bts-project-report">
+              <section class="stage-report-hero">
+                <div>
+                  <div class="project-subtitle">Mission 2 · Sauvegarde</div>
+                  <h3>Sauvegarde centralisée avec Veeam</h3>
+                  <p>Mise en place d'une sauvegarde automatisée des données utilisateurs vers un serveur de stockage Windows centralisé.</p>
+                </div>
+                <div class="stage-report-place">
+                  <span class="stage-report-place-label">Environnement</span>
+                  <strong>Infrastructure Windows virtualisée</strong>
+                  <span>Windows Server 2025 et Windows 11</span>
+                  <span>Deux postes clients de test</span>
+                  <span>Veeam Agent for Windows</span>
+                </div>
+              </section>
+              <section class="stage-report-section">
+                <h4>Contexte et solution</h4>
+                <div class="stage-report-grid">
+                  <div><h5>Besoin</h5><p>Sauvegarder les documents et profils utilisateurs, avec une procédure fiable de restauration.</p></div>
+                  <div><h5>Choix technique</h5><p>Veeam Agent a été retenu pour sa gratuité, sa fiabilité et sa capacité à restaurer fichiers ou systèmes.</p></div>
+                </div>
+              </section>
+              <section class="stage-report-section">
+                <h4>Réalisations</h4>
+                <article class="stage-task"><h5>Préparation du serveur</h5><p>Création d'un partage « Sauvegardes » et d'un compte dédié disposant des droits de lecture et d'écriture.</p></article>
+                <article class="stage-task"><h5>Configuration des clients</h5><p>Installation de Veeam Agent sur deux postes, avec sauvegarde des documents, profils Firefox et Thunderbird.</p></article>
+                <article class="stage-task"><h5>Planification et restauration</h5><p>Configuration d'une exécution quotidienne, contrôle de la sauvegarde et test de restauration depuis une machine cliente.</p></article>
+              </section>
+              <section class="stage-report-section stage-report-notice"><h4>Résultat</h4><p>Les données sont sauvegardées de manière centralisée et la restauration des fichiers a été validée.</p></section>
+            </div>
+            <div class="bts-legacy-content">
+            <div class="stage-report bts-project-report">
+              <section class="stage-report-hero">
+                <div>
+                  <div class="project-subtitle">Mission 1 · Support & maintenance</div>
+                  <h3>Clé USB multi-outils de maintenance</h3>
+                  <p>Conception d'un support d'intervention portable pour diagnostiquer, maintenir et récupérer des postes Windows et Linux.</p>
+                </div>
+                <div class="stage-report-place">
+                  <span class="stage-report-place-label">Environnement</span>
+                  <strong>Support informatique</strong>
+                  <span>Ventoy · Kali Linux · Windows 11</span>
+                  <span>Outils de diagnostic et antivirus live</span>
+                  <span>Tests sous VMware</span>
+                </div>
+              </section>
+              <section class="stage-report-section">
+                <h4>Contexte et solution</h4>
+                <div class="stage-report-grid">
+                  <div><h5>Besoin</h5><p>Centraliser les outils de diagnostic, désinfection et maintenance sur un support utilisable même hors réseau.</p></div>
+                  <div><h5>Choix technique</h5><p>Ventoy permet de démarrer plusieurs ISO depuis une même clé et simplifie les mises à jour.</p></div>
+                </div>
+              </section>
+              <section class="stage-report-section">
+                <h4>Réalisations</h4>
+                <article class="stage-task"><h5>Préparation du support</h5><p>Configuration de Ventoy en français/AZERTY et intégration de Kali Linux, Windows 11, antivirus live et MemTest86+.</p></article>
+                <article class="stage-task"><h5>Outillage de maintenance</h5><p>Sélection d'outils réseau, matériel, stockage et GPU : Wireshark, HWiNFO, CrystalDiskInfo, GpuTest et FastCopy.</p></article>
+                <article class="stage-task"><h5>Tests de fonctionnement</h5><p>Validation de l'amorçage, du test mémoire, du partitionnement avec GParted et de l'analyse antivirus.</p></article>
+              </section>
+              <section class="stage-report-section stage-report-notice"><h4>Résultat</h4><p>Un support portable prêt pour les opérations de diagnostic, de maintenance et de récupération.</p></section>
+            </div>
+            <p class="card-text bts-legacy-content">
+              Mise en œuvre d'une sauvegarde centralisée des profils et documents
+              utilisateurs dans un environnement Windows virtualisé.
             </p>
             <ul class="project-detail-list">
-              <li>Installation et configuration de machines Windows et Linux.</li>
-              <li>Mise en place de services réseau de base.</li>
-              <li>Tests de communication, d'adressage IP et de résolution de noms.</li>
-              <li>Documentation des étapes de configuration et des vérifications.</li>
+              <li>Création d'un serveur de stockage et d'un partage « Sauvegardes ».</li>
+              <li>Configuration de comptes dédiés et des droits d'accès associés.</li>
+              <li>Déploiement de Veeam Agent sur deux postes Windows 11.</li>
+              <li>Sauvegarde planifiée des documents, profils Firefox et Thunderbird.</li>
+              <li>Vérification de l'intégrité et test de restauration des fichiers.</li>
             </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-fog" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4">Déploiement d'images avec FOG Project</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <div class="stage-report bts-project-report">
+              <section class="stage-report-hero">
+                <div>
+                  <div class="project-subtitle">Mission 3 · Déploiement</div>
+                  <h3>Déploiement d'images avec FOG Project</h3>
+                  <p>Mise en place d'une solution de clonage pour capturer et déployer rapidement des images Windows et Linux sur des postes clients.</p>
+                </div>
+                <div class="stage-report-place">
+                  <span class="stage-report-place-label">Environnement</span>
+                  <strong>Infrastructure de test virtualisée</strong>
+                  <span>Serveur Debian 12 · FOG Project</span>
+                  <span>Windows 11 et Ubuntu Linux</span>
+                  <span>Déploiement par démarrage PXE</span>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Contexte et objectif</h4>
+                <div class="stage-report-grid">
+                  <div>
+                    <h5>Besoin identifié</h5>
+                    <p>Automatiser l'installation de postes dans les médiathèques afin de réduire le temps nécessaire aux déploiements et homogénéiser les configurations.</p>
+                  </div>
+                  <div>
+                    <h5>Solution retenue</h5>
+                    <p>FOG Project a été choisi pour sa gratuité, sa compatibilité multi-systèmes, son interface web et son support du démarrage PXE.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Architecture mise en place</h4>
+                <article class="stage-task">
+                  <h5>Serveur FOG et réseau</h5>
+                  <p>Installation d'un serveur Debian 12 nommé LAB-FOG, configuré avec l'adresse 10.2.10.249. Il assure les rôles FOG, DHCP, TFTP, NFS et stockage des images.</p>
+                </article>
+                <article class="stage-task">
+                  <h5>Machines master et clients</h5>
+                  <p>Préparation de deux machines master Windows 11 et Ubuntu, ainsi que de postes clients de test configurés en DHCP pour démarrer sur le réseau.</p>
+                </article>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Réalisation du déploiement</h4>
+                <article class="stage-task">
+                  <h5>Préparation et capture des images</h5>
+                  <p>Préparation de Windows avec Sysprep, désactivation de BitLocker, enregistrement de la machine master dans FOG puis lancement de la capture de l'image système.</p>
+                </article>
+                <article class="stage-task">
+                  <h5>Déploiement PXE</h5>
+                  <p>Enregistrement du poste client depuis le menu PXE, création de la tâche de déploiement et installation automatisée de l'image capturée.</p>
+                </article>
+              </section>
+
+              <section class="stage-report-section stage-report-notice">
+                <h4>Résultat</h4>
+                <p>Les tests ont validé le démarrage PXE, la capture d'images, le déploiement automatique et la compatibilité Windows/Linux sur le réseau de test.</p>
+              </section>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
