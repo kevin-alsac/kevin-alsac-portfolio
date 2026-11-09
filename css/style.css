@@ -769,6 +769,23 @@ section {
   color: var(--text);
 }
 
+.project-repository {
+  margin: -0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.project-repository a {
+  color: var(--accent-2);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-repository a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .project-card-actions {
   display: flex;
   align-items: center;
@@ -1746,6 +1763,201 @@ footer {
 
 .bts-option-slam::before {
   background: linear-gradient(135deg, rgba(255, 138, 61, 0.08), transparent 55%);
+}
+
+/* Projet professionnel E6 */
+.e6-intro h3 {
+  margin-top: 0;
+}
+
+.e6-context-grid {
+  margin-top: 1.3rem;
+}
+
+.e6-context-grid h4 {
+  margin-bottom: 0.65rem;
+  font-size: 1.05rem;
+}
+
+.e6-context-grid p,
+.e6-summary-card p {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+}
+
+.e6-project-report strong {
+  color: var(--text);
+}
+
+.e6-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.e6-section-heading .project-subtitle {
+  margin-bottom: 0.35rem;
+}
+
+.e6-section-heading h4,
+.e6-summary-card h4,
+.e6-technologies h4 {
+  margin-bottom: 0;
+}
+
+.e6-phase-badge {
+  display: inline-flex;
+  margin-top: 0.25rem;
+  padding: 0.42rem 0.7rem;
+  border: 1px solid rgba(255, 138, 61, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 138, 61, 0.08);
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.e6-infrastructure-figure {
+  margin: 0;
+}
+
+.e6-infrastructure-figure > a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.e6-infrastructure-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.e6-infrastructure-figure figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.e6-enlarge-link {
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+}
+
+.e6-prototype-card h5 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.e6-tags {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.e6-tags span {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft-fill);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.e6-prototype-grid,
+.e6-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.e6-prototype-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.e6-prototype-card {
+  padding: 1rem;
+  border: 1px solid rgba(193, 92, 255, 0.14);
+  border-radius: 14px;
+  background: var(--soft-fill);
+}
+
+.e6-prototype-card p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.e6-summary-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.e6-summary-card {
+  margin: 0;
+}
+
+.e6-summary-card h4,
+.e6-technologies h4 {
+  margin-bottom: 0.8rem;
+}
+
+.e6-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.e6-validation {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.e6-validation h5 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.e6-validation ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 0 0 0 1rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.e6-validation li::marker {
+  color: var(--accent);
+}
+
+.e6-technologies {
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .e6-section-heading {
+    display: block;
+  }
+
+  .e6-enlarge-link {
+    margin-top: 0.75rem;
+  }
+
+  .e6-prototype-grid,
+  .e6-summary-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 575.98px) {

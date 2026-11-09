@@ -91,6 +91,43 @@
         <div class="row g-4">
           <div class="col-lg-6">
             <article class="project-list-card">
+              <div class="project-subtitle">Projet 1 : E6 · BTS SIO SISR</div>
+              <h3 class="h4 mb-3">Infrastructure réseau – TiersLieux86</h3>
+              <p class="card-text">
+                Réalisation d'une partie de l'infrastructure du site de Chasseneuil :
+                trois VM sous Hyper-V, un domaine Windows et des accès aux fichiers sécurisés.
+              </p>
+              <p class="project-repository">
+                Travail mené en mode projet, avec <strong>GitLab pour le suivi des tâches,
+                la documentation technique et la traçabilité des modifications</strong> ·
+                <a
+                  href="https://gitlab.com/bts-sio-option-sisr/TiersLieux86-Infrastructure"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <strong>Consulter le dépôt</strong> <span class="visually-hidden">(nouvel onglet)</span><span aria-hidden="true">↗</span>
+                </a>
+              </p>
+              <div class="project-card-actions">
+                <div class="project-card-chips">
+                  <span class="chip">Hyper-V</span>
+                  <span class="chip">OPNsense</span>
+                  <span class="chip">Active Directory</span>
+                </div>
+                <button
+                  class="btn btn-main project-detail-btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-projet-e6"
+                >
+                  Voir le projet
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="project-list-card">
               <div class="project-subtitle">Mission 1 · Support & maintenance</div>
               <h3 class="h4 mb-3">Clé USB multi-outils de maintenance</h3>
               <p class="card-text">
@@ -167,6 +204,7 @@
               </div>
             </article>
           </div>
+
         </div>
       </div>
     </main>
@@ -400,6 +438,136 @@
               <section class="stage-report-section stage-report-notice">
                 <h4>Résultat</h4>
                 <p>Les tests ont validé le démarrage PXE, la capture d'images, le déploiement automatique et la compatibilité Windows/Linux sur le réseau de test.</p>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cv" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-projet-e6" tabindex="-1" aria-labelledby="modal-projet-e6-title" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content project-detail-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h4" id="modal-projet-e6-title">Projet professionnel n°1 – Épreuve E6</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+          </div>
+          <div class="modal-body">
+            <div class="stage-report bts-project-report e6-project-report">
+              <section class="stage-report-section e6-intro">
+                <div class="project-subtitle">BTS SIO · Option SISR · Site de Chasseneuil</div>
+                <h3>Infrastructure réseau et services Windows – TiersLieux86</h3>
+                <span class="e6-phase-badge">Première phase réalisée</span>
+                <div class="stage-report-grid e6-context-grid">
+                  <div>
+                    <h4>Contexte de l'organisation</h4>
+                    <p>
+                      Le site de Chasseneuil accueille des entreprises et des adhérents
+                      dans deux bâtiments. Il met à disposition des bureaux, des salles
+                      de réunion et de formation, ainsi que des services mutualisés :
+                      Internet, Wi-Fi, téléphonie et impression.
+                    </p>
+                  </div>
+                  <div>
+                    <h4>Périmètre de la réalisation</h4>
+                    <p>
+                      J'ai mis en place sous Hyper-V une partie de cette
+                      infrastructure : un serveur Windows, un poste client et un pare-feu
+                      OPNsense. Le serveur centralise l'authentification, l'adressage IP et
+                      les fichiers ; OPNsense assure le routage et le filtrage entre les
+                      réseaux Bureaux et Serveurs.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="stage-report-section">
+                <div class="e6-section-heading">
+                  <div>
+                    <div class="project-subtitle">Architecture de la solution</div>
+                    <h4>Infrastructure virtuelle sous Hyper-V</h4>
+                  </div>
+                  <a class="btn btn-certif e6-enlarge-link" href="../assets/images/projet-e6-hyper-v.png" target="_blank" rel="noopener noreferrer">
+                    Agrandir le schéma <span class="visually-hidden">(nouvel onglet)</span><span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <figure class="e6-infrastructure-figure">
+                  <a href="../assets/images/projet-e6-hyper-v.png" target="_blank" rel="noopener noreferrer" aria-label="Agrandir le schéma de l'infrastructure Hyper-V dans un nouvel onglet">
+                    <img
+                      src="../assets/images/projet-e6-hyper-v.png"
+                      alt="Trois VM sous Hyper-V : FW-CHASSENEUIL (OPNsense) relie le réseau Bureaux 192.168.2.0/24, avec PC01 sous Windows 11 Pro, au réseau Serveurs 10.2.0.0/24, avec SRV-DC01 sous Windows Server 2025. Le serveur fournit Active Directory, DNS, DHCP et les partages SMB ; OPNsense assure le pare-feu et le relais DHCP."
+                      width="1448"
+                      height="977"
+                    />
+                  </a>
+                  <figcaption>Trois machines virtuelles · Deux réseaux séparés · Domaine <strong>tierslieux86.fr</strong></figcaption>
+                </figure>
+              </section>
+
+              <section class="stage-report-section">
+                <h4>Services mis en œuvre</h4>
+                <div class="e6-prototype-grid">
+                  <article class="e6-prototype-card">
+                    <h5>Domaine et DNS</h5>
+                    <p>SRV-DC01 (<strong>10.2.0.1</strong>) héberge le domaine <strong>tierslieux86.fr</strong>. PC01 le rejoint et les utilisateurs se connectent avec leur compte de domaine.</p>
+                  </article>
+                  <article class="e6-prototype-card">
+                    <h5>Routage et DHCP</h5>
+                    <p>OPNsense filtre les échanges entre Bureaux et Serveurs. Son relais DHCP permet à PC01 d'obtenir l'adresse <strong>192.168.2.100</strong> depuis le serveur Windows.</p>
+                  </article>
+                  <article class="e6-prototype-card">
+                    <h5>Fichiers et autorisations</h5>
+                    <p>Le partage <strong>Commun</strong> regroupe les dossiers métiers. Les groupes Active Directory et les permissions NTFS définissent les accès selon le principe <strong>AGDLP</strong>.</p>
+                  </article>
+                </div>
+                <div class="e6-validation">
+                  <h5>Résultats des tests depuis PC01</h5>
+                  <ul>
+                    <li>Jonction au domaine et ouverture de session</li>
+                    <li>Résolution DNS et attribution DHCP via relais</li>
+                    <li>Accès SMB autorisés et accès non autorisés refusés</li>
+                  </ul>
+                </div>
+              </section>
+
+              <div class="e6-summary-grid">
+                <section class="stage-report-section e6-summary-card">
+                  <h4>Compétences mobilisées</h4>
+                  <div class="e6-tags" aria-label="Compétences mobilisées">
+                    <span>Virtualisation</span>
+                    <span>Segmentation réseau</span>
+                    <span>Routage et pare-feu</span>
+                    <span>Administration Windows</span>
+                    <span>Gestion des accès</span>
+                    <span>Documentation technique</span>
+                  </div>
+                </section>
+
+                <section class="stage-report-section e6-summary-card">
+                  <h4>Avancement du projet E6</h4>
+                  <p>
+                    <strong>Infrastructure mise en place et testée.</strong> Cette réalisation constitue
+                    la première phase du projet professionnel ; son évolution et sa
+                    finalisation restent en cours.
+                  </p>
+                </section>
+              </div>
+
+              <section class="stage-report-section e6-technologies">
+                <h4>Technologies utilisées</h4>
+                <div class="project-card-chips">
+                  <span class="chip">Hyper-V</span>
+                  <span class="chip">OPNsense</span>
+                  <span class="chip">Windows Server 2025</span>
+                  <span class="chip">Windows 11 Pro</span>
+                  <span class="chip">Active Directory</span>
+                  <span class="chip">DNS</span>
+                  <span class="chip">DHCP</span>
+                  <span class="chip">SMB / partage de fichiers</span>
+                </div>
               </section>
             </div>
           </div>
